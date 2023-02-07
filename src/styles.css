@@ -162,25 +162,31 @@ body {
 .offcanvas .cart-items {
     margin: 30px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .offcanvas .item-name {
-    grid-column: span 1;
+    grid-column: span 3;
 }
 
 .offcanvas .item-price {
-    grid-column: span 1;
+    grid-column: span 2;
     text-align: end;
 }
 
 .offcanvas .total-price {
-    grid-column: span 2;
+    grid-column: 1 / span 5;
     text-align: end;
 }
 
 .offcanvas .dropdown {
     text-align: end;
+}
+
+.offcanvas .remove-item {
+    grid-column: span 1;
+    text-align: center;
+    margin: 4px auto;
 }
 
 iframe {
