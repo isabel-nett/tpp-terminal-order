@@ -159,7 +159,7 @@ body {
     margin-bottom: 10px;
 }
 
-.offcanvas .cart-items {
+.offcanvas .cart-row, .total-row {
     margin: 30px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -183,16 +183,30 @@ body {
     text-align: end;
 }
 
+.offcanvas .btn-checkout {
+    background: var(--tpp-orange);
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+
+.offcanvas .btn-checkout:hover {
+    background-color: var(--tpp-purple);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
 .offcanvas .remove-item {
     grid-column: span 1;
     text-align: center;
     margin: 4px auto;
+    background-color: none;
+    background: none;
+    border: none;
 }
 
-iframe {
-    margin: 20px;
-    width: 500px;
-    height: 500px;
+.iframe-container {
+    margin: 20px auto;
 }
 
 footer {
