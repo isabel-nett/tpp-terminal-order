@@ -22,7 +22,7 @@
     <div class="terminal-list">
             <div class="card rounded shadow-lg col-xl-6 col-lg-7 col-md-9 col-10">
                 <div class="card-left">
-                    <img class="image" src="/src/images/terminal.png" alt="Terminal Image 1">
+                    <img class="image" src="/src/images/IngenicoTerminal.png" alt="Terminal Image 1">
                 </div>
                 <div class="card-right">
                     <h4 class="title">Conventional Terminal</h4>
@@ -75,6 +75,10 @@
                 </div>
             </div>
     </div>
+    <footer>
+        <div class="legal">© Triple Play Payment Solutions, 2022 All rights reserved.</div>
+    </footer>
+<!-- Terminal 1 Modal -->
 <div class="modal fade" id="T1Modal" tabindex="-1" aria-labelledby="T1ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-xl-lg-down">
         <div class="modal-content">
@@ -83,7 +87,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="image-container col-md-5 col-10"><img class="terminal-image" src="/src/images/terminal.png" alt="Terminal Image"></div>
+                <div class="image-container col-md-5 col-10"><img class="terminal-image" src="/src/images/IngenicoTerminal.png" alt="Terminal Image"></div>
                 <div class="specs-container col-sm-10 col-12">
                     <div class="section-title spec-title">Features</div>
                     <div class="specs-grid">
@@ -104,6 +108,7 @@
         </div>
     </div>
 </div>
+<!-- Terminal 2 Modal -->
 <div class="modal fade" id="T2Modal" tabindex="-1" aria-labelledby="T2ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-xl-lg-down">
         <div class="modal-content">
@@ -135,6 +140,7 @@
         </div>
     </div>
 </div>
+<!-- Terminal 3 Modal -->
 <div class="modal fade" id="T3Modal" tabindex="-1" aria-labelledby="T3ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-xl-lg-down">
         <div class="modal-content">
@@ -164,6 +170,7 @@
         </div>
     </div>
 </div>
+<!-- Sidebar below contains Cart & Checkout -->
 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="cart" aria-labelledby="cartLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="cartLabel">Your Cart</h5>
@@ -172,24 +179,13 @@
     <div class="offcanvas-body">
       <div>
         <div class="cart-items">
-            <div class="cart-item">
-              <span class="item-name">Item 1</span>
-              <span class="item-price">$5.00</span>
-            </div>
-        
-            <div class="cart-item">
-              <span class="item-name">Item 2</span>
-              <span class="item-price">$10.00</span>
-            </div>
-        
-            <div class="cart-item">
-              <span class="item-name">Item 3</span>
-              <span class="item-price">$15.00</span>
-            </div>
-        
-          </div><!-- end cart items -->
-        
-          <div class="total-price">Total Price: $30.00</div>
+              <div class="item-name" id="item2Name">Item 1</div>
+              <div class="item-price" id="item2Price">$499.00</div>
+              <i class="bi bi-x-circle remove-item" id="removeItem1"></i>
+              <div class="item-name" id="item2Name">Item 1</div>
+              <div class="item-price" id="item2Price">$499.00</div>
+              <i class="bi bi-x-circle remove-item" id="removeItem1"></i>
+            <div class="total-price">Total Price: <span id="totalPrice">$0000</span></div>
       </div>
       <div class="dropdown mt-3">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">

@@ -69,9 +69,10 @@ body {
 }
 
 .terminal-list .image {
-    margin: 0 auto;
+    margin: 15px auto;
     max-width: 250px;
     border-radius: 20px;
+    padding-right: 30px;
 }
 
 .terminal-list .title {
@@ -144,6 +145,7 @@ body {
 
 .modal .spec-list {
     margin: 5px;
+    font-size: 12pt;
 }
 
 .modal .spec-name {
@@ -157,9 +159,41 @@ body {
     margin-bottom: 10px;
 }
 
+.offcanvas .cart-items {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.offcanvas .item-name {
+    grid-column: span 1;
+}
+
+.offcanvas .item-price {
+    grid-column: span 1;
+    text-align: end;
+}
+
+.offcanvas .total-price {
+    grid-column: span 2;
+    text-align: end;
+}
+
+.offcanvas .dropdown {
+    text-align: end;
+}
+
 iframe {
+    margin: 20px;
     width: 500px;
     height: 500px;
+}
+
+footer {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--tpp-purple);
+    color: white;
 }
 
 @media  screen and (max-width: 550px) {
@@ -174,4 +208,7 @@ iframe {
         text-align: center;
     }
 
+    .terminal-list .image {
+        padding-right: 0;
+}
 }
