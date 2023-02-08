@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="main.js" async></script>
     <title>Order Terminals</title>
 </head>
 <body>
@@ -27,15 +26,15 @@
                 </div>
                 <div class="card-right">
                     <h4 class="title">Conventional Terminal</h4>
-                    <div class="price">$499</div>
+                    <div>$<span class="price">499</span></div>
                     <div class="details">
                         <small class="about">A wired terminal with traditional and contactless payment functionality.
                         <a class="modal-link" type="button" value="Details >" data-bs-toggle="modal" data-bs-target="#T1Modal">View details ></a></small>
                     </div>
                     <form>
                         <label for="quantity">Quantity:</label>
-                        <input type="number" name="quantity" min="1" max="10"> </br>
-                        <input class="btn" type="submit" value="Add to Cart">
+                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT1"> </br>
+                        <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal1" onclick="addToCart()">Add to Cart</a>
                     </form>
                 </div>
             </div>
@@ -45,15 +44,15 @@
                 </div>
                 <div class="card-right">
                     <h4 class="title">Mobile Wireless Terminal</h4>
-                    <div class="price">$499</div>
+                    <div>$<span class="price">499</span></div>
                     <div class="details">
                         <small class="about">A wireless mobile touch-screen terminal that runs on secure Andoid OS.
                         <a class="modal-link" type="button" value="Details >" data-bs-toggle="modal" data-bs-target="#T2Modal">View details ></a></small>
                     </div>
                     <form>
                         <label for="quantity">Quantity:</label>
-                        <input type="number" name="quantity" min="1" max="10"> </br>
-                        <input class="btn" type="submit" value="Add to Cart">
+                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="quantityTerminal2"> </br>
+                        <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal2" onclick="addToCart()">Add to Cart</a>
                     </form>
                 </div>
             </div>
@@ -63,15 +62,15 @@
                 </div>
                 <div class="card-right">
                     <h4 class="title">Desktop Terminal</h4>
-                    <div class="price">$499</div>
+                    <div>$<span class="price">499</span></div>
                     <div class="details">
                         <small class="about">A sizeable desktop touch-screen terminal that runs on secure Andoid OS.
                         <a class="modal-link" type="button" value="Details >" data-bs-toggle="modal" data-bs-target="#T3Modal">View details ></a></small>
                     </div>
                     <form>
                         <label for="quantity">Quantity:</label>
-                        <input type="number" name="quantity" min="1" max="10"> </br>
-                        <input class="btn" type="submit" value="Add to Cart">
+                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="quantityTerminal3"> </br>
+                        <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal3" onclick="addToCart()">Add to Cart</a>
                     </form>
                 </div>
             </div>
@@ -178,51 +177,19 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <div>
-        <div class="cart-items">
-            <!-- Rows using CSS grid: item#Name, item#Price, removeItem# -->
-            <div class="cart-row">
-              <div class="item-name cart-column" id="item1Name"></div>
-              <div class="item-price cart-column" id="item1Price"></div>
-              <button class="remove-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16" id="removeItem1">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-              </svg></button>
-            </div>
-            <div class="cart-row">
-              <div class="item-name cart-column" id="item2Name"></div>
-              <div class="item-price cart-column" id="item2Price"></div>
-              <button class="remove-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16" id="removeItem1">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-              </svg></button>
-            </div>
-            <div class="cart-row">
-              <div class="item-name cart-column" id="item3Name"></div>
-              <div class="item-price cart-column" id="itemePrice"></div>
-              <button class="remove-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16" id="removeItem1">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-              </svg></button>
+        <div>
+            <div class="cart-items">
             </div>
             <div class="total-row">
                 <div class="total-price">Total Price: <span id="totalPrice"></span>$0</div>
             </div>
-      </div>
-      <div class="dropdown mt-3">
-        <button class="btn btn-secondary btn-checkout" type="button" data-bs-toggle="dropdown">
-          Continue to Checkout
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" id="payCard">Pay with Card</a></li>
-          <li><a class="dropdown-item" href="#" id="payACH">Pay with ACH</a></li>
-        </ul>
-        <div class="iframe-container col-12">
-            <iframe src="" frameborder="0"></iframe>
+            <div class="iframe-container col-12">
+                <div id="iFrame">TEST</div>
+            </div>
         </div>
-      </div>
-    </div>
   </div>
 </div>
+<script src="//www.tripleplaypay.com/static/js/triple.js"></script>
+<script src="app.js" async></script>
 </body>
 </html>
