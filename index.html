@@ -7,14 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="src/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>Order Terminals</title>
 </head>
 <body>
-<div id="app">
-    <div class="header"> 
-        <a href="https://3playpay.com/"><img class="logo" src="/src/images/TPP_logo-cropped.png" alt="TPP Logo"></a>
+    <div class="header">
+        <a href="https://3playpay.com/"><img class="logo" src="src/images/TPP_logo-cropped.png" alt="TPP Logo"></a>
         <a class="btn btn-primary cart-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="offcanvasExample">
             Cart
         </a>
@@ -22,17 +21,17 @@
     <div class="terminal-list">
             <div class="card rounded shadow-lg col-xl-6 col-lg-7 col-md-9 col-10">
                 <div class="card-left">
-                    <img class="image" src="/src/images/IngenicoTerminal.png" alt="Terminal Image 1">
+                    <img class="image" src="src/images/IngenicoTerminal.png" alt="Terminal Image 1">
                 </div>
                 <div class="card-right">
                     <h4 class="title">Conventional Terminal</h4>
-                    <div>$<span class="price">499</span></div>
+                    <div class="price">$499</div>
                     <div class="details">
                         <small class="about">A wired terminal with traditional and contactless payment functionality.
                         <a class="modal-link" type="button" value="Details >" data-bs-toggle="modal" data-bs-target="#T1Modal">View details ></a></small>
                     </div>
                     <form>
-                        <label for="quantity">Quantity:</label>
+                        <label for="qtyT1">Quantity:</label>
                         <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT1"> </br>
                         <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal1" onclick="addToCart()">Add to Cart</a>
                     </form>
@@ -40,36 +39,36 @@
             </div>
             <div class="card rounded shadow-lg col-xl-6 col-lg-7 col-md-9 col-10">
                 <div class="card-left">
-                    <img class="image" src="/src/images/QD3terminal.png" alt="Terminal Image 2">
+                    <img class="image" src="src/images/QD3terminal.png" alt="Terminal Image 2">
                 </div>
                 <div class="card-right">
                     <h4 class="title">Mobile Wireless Terminal</h4>
-                    <div>$<span class="price">499</span></div>
+                    <div class="price">$269</div>
                     <div class="details">
                         <small class="about">A wireless mobile touch-screen terminal that runs on secure Andoid OS.
                         <a class="modal-link" type="button" value="Details >" data-bs-toggle="modal" data-bs-target="#T2Modal">View details ></a></small>
                     </div>
                     <form>
-                        <label for="quantity">Quantity:</label>
-                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="quantityTerminal2"> </br>
+                        <label for="qtyT2">Quantity:</label>
+                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT2"> </br>
                         <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal2" onclick="addToCart()">Add to Cart</a>
                     </form>
                 </div>
             </div>
             <div class="card rounded shadow-lg col-xl-6 col-lg-7 col-md-9 col-10">
                 <div class="card-left">
-                    <img class="image" src="/src/images/QD4terminal.png" alt="Terminal Image 3">
+                    <img class="image" src="src/images/QD4terminal.png" alt="Terminal Image 3">
                 </div>
                 <div class="card-right">
                     <h4 class="title">Desktop Terminal</h4>
-                    <div>$<span class="price">499</span></div>
+                    <div class="price">$299</div>
                     <div class="details">
                         <small class="about">A sizeable desktop touch-screen terminal that runs on secure Andoid OS.
                         <a class="modal-link" type="button" value="Details >" data-bs-toggle="modal" data-bs-target="#T3Modal">View details ></a></small>
                     </div>
                     <form>
-                        <label for="quantity">Quantity:</label>
-                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="quantityTerminal3"> </br>
+                        <label for="qtyT3">Quantity:</label>
+                        <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT3"> </br>
                         <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal3" onclick="addToCart()">Add to Cart</a>
                     </form>
                 </div>
@@ -177,19 +176,19 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <div>
-            <div class="cart-items">
-            </div>
-            <div class="total-row">
-                <div class="total-price">Total Price: <span id="totalPrice"></span>$0</div>
-            </div>
-            <div class="iframe-container col-12">
-                <div id="iFrame">TEST</div>
-            </div>
+        <div class="header-row">
+            <div class="item-name cart-column">Terminal</div><div class="item-quantity cart-column">Qty</div><div class="item-price cart-column">Price</div></div>
+        <div class="cart-items" id="cartItems">Empty</div>
+        <div class="total-row">
+            <div class="total-price" id="totalPrice"></div>
         </div>
-  </div>
+        <div class="iframe-container">
+            <div id="iFrame">Hello, there's currently nothing in your cart.</div>
+        </div>
+    </div>
 </div>
-<script src="//www.tripleplaypay.com/static/js/triple.js"></script>
-<script src="app.js" async></script>
+
 </body>
+    <script src="https://www.tripleplaypay.com/static/js/triple.js"></script>
+    <script src="app.js"></script>
 </html>

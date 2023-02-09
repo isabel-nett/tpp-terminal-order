@@ -159,29 +159,40 @@ body {
     margin-bottom: 10px;
 }
 
-.offcanvas .cart-row, .total-row {
-    margin: 30px;
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.offcanvas .cart-row, .total-row, .header-row {
+    margin: 5px 30px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.offcanvas .header-row {
+    font-weight: bolder;
 }
 
 .offcanvas .item-name {
-    grid-column: span 3;
-}
-
-.offcanvas .item-price {
-    grid-column: span 2;
-    text-align: end;
+    grid-column: span 5;
 }
 
 .offcanvas .item-quantity {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.offcanvas .item-price {
     grid-column: span 1;
     text-align: end;
 }
 
 .offcanvas .total-price {
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 8;
     text-align: end;
+    font-weight: bolder;
 }
 
 .offcanvas .dropdown {
@@ -199,15 +210,6 @@ body {
     background-color: var(--tpp-purple);
     color: white;
     transition: all 0.2s ease-in-out;
-}
-
-.offcanvas .remove-item {
-    grid-column: span 1;
-    text-align: center;
-    margin: 4px auto;
-    background-color: none;
-    background: none;
-    border: none;
 }
 
 .iframe-container {
