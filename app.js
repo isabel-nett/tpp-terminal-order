@@ -11,24 +11,58 @@ options = {
          // Color
          color: '#fff',
          // Backgroung
-         background: '#93e368',
+         background: 'rgb(248, 150, 31)',
          // Border radius
          borderRadius: '15px',
          // Font size
-         fontSize: '18px',
+         fontSize: '16px',
          // Handle :active pseudo class
          active: {
             // Change color on active state
             color: '#eef7e9',
             // Change background on active state
-            background: '#82cf59',
+            background: 'rgb(70, 83, 130)',
          },
          // Handle :hover pseudo class
          hover: {
             color: '#eef7e9',
-            background: '#8ed667',
+            background: 'rgb(70, 83, 130)',
          },
       },
+      input: {
+        color: '#454545',
+        background: '#white',
+        borderRadius: '5px',
+        borderColor: '#fff',
+        borderWidth: '1px',
+        height: '50px',
+        fontSize: '14px',
+        fontWeight: '500',
+        // Handle focus pseudo class
+        focus: {
+            borderColor: '#c8e3b8',
+            background: 'white',
+            color: '#bfbfbf',
+        },
+        // Handle error state (when input contains incorrect data)
+        error: {
+            borderColor: '#cf6565',
+            background: '#white',
+            color: '#bfbfbf',
+        },
+        // Placeholder style
+        placeholder: {
+            color: '#a3a3a3',
+            fontSize: '14px',
+            fontWeight: '500',
+        },
+        // Error text style (text below input in error state)
+        errorText: {
+            color: 'red',
+            fontSize: '12px',
+            fontWeight: '500',
+        },
+    },
    },
    onError: (errorData) => {
       console.log('Error');
@@ -78,6 +112,6 @@ function addToCart() {
         };
     options.amount = total;
     document.getElementById('cartItems').innerHTML= _html;
-    document.getElementById('totalPrice').innerHTML= `Total Price: $${total}`;
+    document.getElementById('totalPrice').innerHTML= `Total: $${total}`;
     triple.generatePaymentForm(options);
 };

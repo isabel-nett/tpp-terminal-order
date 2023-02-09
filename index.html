@@ -170,7 +170,7 @@
     </div>
 </div>
 <!-- Sidebar below contains Cart & Checkout -->
-<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="cartLabel">Your Cart</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -178,12 +178,14 @@
     <div class="offcanvas-body">
         <div class="header-row">
             <div class="item-name cart-column">Terminal</div><div class="item-quantity cart-column">Qty</div><div class="item-price cart-column">Price</div></div>
-        <div class="cart-items" id="cartItems">Empty</div>
+        <div class="cart-items" id="cartItems"><span>This cart is empty.</span></div>
         <div class="total-row">
             <div class="total-price" id="totalPrice"></div>
         </div>
+        <div class="shipping text-end"><small>Estimated shipping time: 2 weeks.</small></div>
         <div class="iframe-container">
-            <div id="iFrame">Hello, there's currently nothing in your cart.</div>
+            <div class="order ms-4 fw-bold">Check out below to order your terminals:</div>
+            <div id="iFrame"></div>
         </div>
     </div>
 </div>

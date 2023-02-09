@@ -159,20 +159,19 @@ body {
     margin-bottom: 10px;
 }
 
-.offcanvas-body {
-    display: flex;
-    flex-direction: column;
-    color: white;
+.offcanvas-end {
+    width: 520px !important; 
 }
 
 .offcanvas .cart-row, .total-row, .header-row {
-    margin: 5px 30px;
+    width: 400px;
+    margin: 8px auto;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
 
 .offcanvas .header-row {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .offcanvas .item-name {
@@ -192,38 +191,27 @@ body {
 .offcanvas .total-price {
     grid-column: 1 / span 8;
     text-align: end;
-    font-weight: bolder;
-}
-
-.offcanvas .dropdown {
-    text-align: end;
-}
-
-.offcanvas .btn-checkout {
-    background: var(--tpp-orange);
-    color: white;
     font-weight: 700;
-    border: none;
+    margin-top: 5px;
+    border-top: 1px solid lightgray;
 }
 
-.offcanvas .btn-checkout:hover {
-    background-color: var(--tpp-purple);
-    color: white;
-    transition: all 0.2s ease-in-out;
+.offcanvas .shipping {
+    margin-right: 45px;
 }
 
-.iframe-container {
-    margin: 20px auto;
+.offcanvas .iframe-container {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 50px;
 }
 
 footer {
     padding: 50px;
     text-align: center;
-    background-color: var(--tpp-purple);
+    background-color: #202538;
     color: white;
 }
-
-/* iframe */
 
 
 @media  screen and (max-width: 550px) {
