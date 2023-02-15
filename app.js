@@ -42,12 +42,12 @@ options = {
         focus: {
             borderColor: 'gray',
             background: 'white',
-            color: '#black',
+            color: 'gray',
         },
         // Handle error state (when input contains incorrect data)
         error: {
             borderColor: '#cf6565',
-            background: '#white',
+            background: 'white',
             color: '#bfbfbf',
         },
         // Placeholder style
