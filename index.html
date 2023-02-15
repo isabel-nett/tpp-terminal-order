@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="src/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>Order Terminals</title>
+    <style>
+        .form-control:focus {
+  border-color: #F89720;
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 1px rgba(255, 0, 0, 0);
+}
+    </style>
 </head>
 <body>
     <div class="header">
@@ -33,7 +39,7 @@
                     <form>
                         <label for="qtyT1">Quantity:</label>
                         <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT1"> </br>
-                        <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal1" onclick="addToCart()">Add to Cart</a>
+                        <a class="btn add-to-cart" type="submit" value="Update Cart" id="addTerminal1" onclick="addToCart(this)">Update Cart</a>
                     </form>
                 </div>
             </div>
@@ -51,7 +57,7 @@
                     <form>
                         <label for="qtyT2">Quantity:</label>
                         <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT2"> </br>
-                        <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal2" onclick="addToCart()">Add to Cart</a>
+                        <a class="btn add-to-cart" type="submit" value="Update Cart" id="addTerminal2" onclick="addToCart(this)">Update Cart</a>
                     </form>
                 </div>
             </div>
@@ -69,7 +75,7 @@
                     <form>
                         <label for="qtyT3">Quantity:</label>
                         <input class="quantity-input" type="number" name="quantity" min="1" max="10" id="qtyT3"> </br>
-                        <a class="btn add-to-cart" type="submit" value="Add to Cart" id="addTerminal3" onclick="addToCart()">Add to Cart</a>
+                        <a class="btn add-to-cart" type="submit" value="Update Cart" id="addTerminal3" onclick="addToCart(this)">Update Cart</a>
                     </form>
                 </div>
             </div>

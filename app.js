@@ -40,7 +40,7 @@ options = {
         fontWeight: '300',
         // Handle focus pseudo class
         focus: {
-            borderColor: 'gray',
+            borderColor: '#F89720',
             background: 'white',
             color: 'gray',
         },
@@ -69,8 +69,7 @@ options = {
       console.log(errorData);
    },
    onSuccess: (data) => {
-      console.log('Success');
-      console.log(data);
+      document
    },
 }
 
@@ -98,7 +97,7 @@ total = 0
 total_qty = 0
 _html = ''
 
-function addToCart() {
+function addToCart(e) {
     triple.clear();
     total = 0;
     total_qty = 0;
@@ -114,4 +113,7 @@ function addToCart() {
     document.getElementById('cartItems').innerHTML= _html;
     document.getElementById('totalPrice').innerHTML= `Total: $${total}`;
     triple.generatePaymentForm(options);
+    al = document.createElement('div')
+    al.innerHTML = '<div class="alert alert-light alert-dismissible mt-1" role="alert">Successfully updated! <br><a data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="offcanvasExample">View your cart</a>.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+    document.getElementById(e.id).parentNode.appendChild(al)
 };
