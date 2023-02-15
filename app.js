@@ -36,8 +36,8 @@ options = {
         borderColor: 'gray',
         borderWidth: '1px',
         height: '40px',
-        fontSize: '14px',
-        fontWeight: '400',
+        fontSize: '16px',
+        fontWeight: '300',
         // Handle focus pseudo class
         focus: {
             borderColor: 'gray',
@@ -52,9 +52,9 @@ options = {
         },
         // Placeholder style
         placeholder: {
-            color: '#gray',
-            fontSize: '14px',
-            fontWeight: '400',
+            color: 'gray',
+            fontSize: '16px',
+            fontWeight: '300',
         },
         // Error text style (text below input in error state)
         errorText: {
