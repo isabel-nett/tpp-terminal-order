@@ -14,7 +14,7 @@
 <body>
     <div class="header">
         <a href="https://3playpay.com/"><img class="logo" src="src/images/TPP_logo-cropped.png" alt="TPP Logo"></a>
-        <a class="btn btn-primary cart-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="offcanvasExample">
+        <a class="btn btn-primary cart-btn align-middle" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="offcanvasExample">
             Cart
         </a>
     </div>
@@ -184,7 +184,51 @@
         </div>
         <div class="shipping text-end"><small>Estimated shipping time: 2 weeks.</small></div>
         <div class="iframe-container">
-            <div class="order ms-4 fw-bold">Check out below to order your terminals:</div>
+            <div class="details-heading mb-3">Shipping details:</div>
+            <div class="billing-details">
+                <div class="row mb-2">
+                    <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="firstName" class="form-control" placeholder="First Name"/>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="lastName" class="form-control" placeholder="Last Name"/>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-outline mb-2">
+                    <input type="text" id="company" class="form-control" placeholder="Company Name"/>
+                </div>
+                <div class="form-outline mb-2">
+                    <input type="text" id="addressL1" class="form-control" placeholder="Address Line 1" />
+                </div>
+                <div class="form-outline mb-2">
+                    <input type="text" id="addressL2" class="form-control" placeholder="Address Line 2" />
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="city" class="form-control" placeholder="City"/>
+                    </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" id="state" class="form-control" placeholder="State"/>
+                        </div>
+                        </div>
+                    <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="zip" class="form-control" placeholder="ZIP"/>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-outline mb-2">
+                    <input type="email" id="email" class="form-control" placeholder="Email"/>
+                </div>
+            </div>
+            <div class="details-heading mt-4">Billing details:</div>
             <div id="iFrame"></div>
         </div>
     </div>

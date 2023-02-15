@@ -30,19 +30,19 @@ options = {
          },
       },
       input: {
-        color: '#454545',
-        background: '#white',
+        color: 'black',
+        background: 'white',
         borderRadius: '5px',
-        borderColor: '#fff',
+        borderColor: 'gray',
         borderWidth: '1px',
-        height: '50px',
+        height: '40px',
         fontSize: '14px',
-        fontWeight: '500',
+        fontWeight: '400',
         // Handle focus pseudo class
         focus: {
-            borderColor: '#c8e3b8',
+            borderColor: 'gray',
             background: 'white',
-            color: '#bfbfbf',
+            color: '#black',
         },
         // Handle error state (when input contains incorrect data)
         error: {
@@ -52,9 +52,9 @@ options = {
         },
         // Placeholder style
         placeholder: {
-            color: '#a3a3a3',
+            color: '#gray',
             fontSize: '14px',
-            fontWeight: '500',
+            fontWeight: '400',
         },
         // Error text style (text below input in error state)
         errorText: {
