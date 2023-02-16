@@ -69,7 +69,7 @@ options = {
       console.log(errorData);
    },
    onSuccess: (data) => {
-      document
+    document.querySelector(".terminal-list").innerHTML = '<div class="ms-4"><h1>Thank you for your order</h1><p>Your business means a lot to us.</br>Somebody from our team will reach out soon with the tracking code for your shipment.</p></div>';
    },
 }
 
@@ -113,7 +113,7 @@ function addToCart(e) {
     document.getElementById('cartItems').innerHTML= _html;
     document.getElementById('totalPrice').innerHTML= `Total: $${total}`;
     triple.generatePaymentForm(options);
-    al = document.createElement('div')
-    al.innerHTML = '<div class="alert alert-light alert-dismissible mt-1" role="alert">Successfully updated! <br><a data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="offcanvasExample">View your cart</a>.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-    document.getElementById(e.id).parentNode.appendChild(al)
+    al = document.createElement('div');
+    al.innerHTML = '<div class="alert alert-light alert-dismissible mt-1" role="alert">Successfully updated! <br><a data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="offcanvasExample">View your cart</a>.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    document.getElementById(e.id).parentNode.appendChild(al);
 };
